@@ -1,7 +1,13 @@
+body {
+  background: #000000;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  background: gray;
+  border-radius: 5px;
 }
 
 h1 {
@@ -23,10 +29,13 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 button:hover {
   background-color: #0069d9;
+  
 }
 
 #quiz {
@@ -76,40 +85,10 @@ button[type="submit"] {
   top: 0;
   left: 0;
   margin: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
 }
 
 
 
-@media screen and (max-width: 1183px) {
-  main {
-    flex-direction: column;
-  }
-
-  .word-guess,
-  .results {
-    width: 90vw;
-  }
-
-  section {
-    background-color: white;
-    margin: 20px auto;
-    width: 92vw;
-  }
-}
-
-@media screen and (max-width: 504px) {
-  .large-font {
-    font-size: 2em;
-  }
-
-  .reset-button {
-    font-size: 12px;
-    width: 20ox;
-    
-  }
-
-  .timer {
-    height: 200px;
-  }
- 
-}

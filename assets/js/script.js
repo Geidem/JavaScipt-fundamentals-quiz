@@ -30,7 +30,7 @@ var questions = [
 
 
 var currentQuestionIndex = 0;
-var timeLeft = 60;
+var timeLeft = 30;
 var timerInterval;
 var score = 0;
 
@@ -103,7 +103,7 @@ function endQuiz() {
 
   var initials = initialsInput.value.trim();
   if (initials !== "") {
-    addScore(initials, score);
+    addScore();
   }
 }
 
@@ -131,6 +131,7 @@ function addScore(initials, score) {
 }
 
 function displayScores() {
+
   var scoresList = document.getElementById("high-scores");
   scoresList.innerHTML = "";
   for (var i = 0; i < highScores.length; i++) {
@@ -143,9 +144,9 @@ function displayScores() {
 
 var highScoresLink = document.getElementById("high-scores");
 
-highScoresLink.addEventListener("click", function(event) {
-  event.preventDefault();
-  displayScores(); // prevent default link behavior
-  window.location.href = "high-scores.html"; 
+highScoresLink.addEventListener("click" , function(event) {
+    event.preventDefault();
+    displayScores(); 
+    window.location.href = "high-scores.html"; 
 });
 
